@@ -2,6 +2,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { FormGroup, Input, Label } from 'reactstrap';
 
 function SizeSelector() {
+
+    
+
     return (
     <FormGroup tag="fieldset">
     <Label for="exampleSelect" style={{ 

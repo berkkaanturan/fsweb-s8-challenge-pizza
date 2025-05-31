@@ -24,8 +24,6 @@ function OrderNote() {
                 style={{ 
                     fontFamily: "Barlow",
                     minHeight: "50px",
-                    paddingTop:"12px",
-                    lineHeight: "24px"
                 }}
             />
         </FormGroup>
