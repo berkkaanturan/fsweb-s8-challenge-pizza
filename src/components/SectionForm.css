@@ -57,3 +57,48 @@
   margin-top: 40px;
   gap: 15rem;
 }
+
+@media screen and (max-width: 1024px) {
+  .section-form {
+    width: 95%;
+  }
+
+  #ratingP {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-form {
+    padding: 1.5rem;
+  }
+
+  .order-price-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .boyut-sec {
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-form {
+    padding: 1rem;
+  }
+
+  .form-title {
+    text-align: center;
+  }
+
+  .order-price-container {
+    text-align: center;
+    align-items: center;
+  }
+
+  .boyut-sec {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

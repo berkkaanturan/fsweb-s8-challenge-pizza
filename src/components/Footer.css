@@ -119,3 +119,62 @@ footer h5 {
   font-size: 1rem;
   font-weight: 300;
 } 
+
+@media (max-width:500px) {
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-left {
+    width: 100%;
+    margin-left: -1rem;
+  }
+
+  .footer-left h5 {
+    font-size: 2.5rem;
+    margin-left: -1rem;
+
+  }
+
+
+  .footer-left-item img {
+    width: 1.5rem;
+    margin-left: -1rem;
+    margin-top: -1.6rem;
+  }
+
+  .footer-left-item p {
+    font-size: 1rem;
+    margin-top: -1rem;
+  }
+
+  .footer-mid {
+    width: 100%;
+    margin-left: -2rem;
+    margin-top: 2rem;
+  }
+
+  .footer-mid h6 {
+    font-size: 1.4rem;
+  }
+
+  .footer-mid a {
+    font-size: 1rem;
+  }
+
+  .footer-right {
+    width: 100%;
+    margin-left: -2rem;
+    margin-top: 1rem;
+  }
+
+  .footer-right-images img {
+    width: 29%; /* Her resmin genişliğini %45 olarak ayarla */
+  }
+
+
+  .copyright-items {
+    width: 85%;
+  }
+}

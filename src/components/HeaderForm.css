@@ -36,3 +36,69 @@
     margin-left: 5px;
 }
 
+/* ...existing code... */
+
+@media (max-width: 1024px) {
+  .order-header-wrapper {
+    margin: 0 20rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .order-header-wrapper {
+    margin: 0 10rem;
+  }
+
+  .order-header img {
+    width: 12rem;
+    margin: 3rem auto 1.5rem auto;
+  }
+
+  .order-header-title {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .order-header-wrapper {
+    margin: 0 2rem;
+  }
+
+  .order-header img {
+    width: 10rem;
+    margin: 2rem auto 1rem auto;
+  }
+
+  .order-header-title {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .order-header-p1,
+  .order-header-p2 {
+    font-size: 14px;
+  }
+
+  .order-header-p2 {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .order-header-wrapper {
+    margin: 0 1rem;
+  }
+
+  .order-header img {
+    width: 8rem;
+  }
+
+  .order-header-p1,
+  .order-header-p2 {
+    font-size: 12px;
+  }
+}
+
