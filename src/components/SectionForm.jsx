@@ -1,5 +1,11 @@
-import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import "./SectionForm.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import SizeSelector from "./SizeSelector";
+import DoughSelector from "./DoughSelector";
+import ExtraIngredients from "./ExtraIngredients";
+import OrderNote from "./OrderNote";
+import CompleteOrder from "./CompleteOrder";
+
 export default function SectionForm() {
   return (
     <section className="section-form">
@@ -16,8 +22,24 @@ export default function SectionForm() {
         </p>
 
         <div className="boyut-sec">
-        <h2 className="form-title2">Boyut Seç <span style={{color:"red"}}>*</span></h2>
+        <SizeSelector />
+        <DoughSelector />
         </div>
+
+        <div className="extra-ingredients">
+        <ExtraIngredients />  
+        </div>
+
+        <div className="order-note-container">
+        <OrderNote />
+        </div>
+
+        <hr className="section-divider" style={{marginTop:"40px"}}/>
+
+        <div className="bottom-section-form">
+        <CompleteOrder />
+        </div>
+
       </form>
     </section>
   );

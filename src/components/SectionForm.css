@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   margin: 3rem 40rem 0 40rem;
-  border: solid 1px red;
 }
 
 .form-title {
@@ -30,7 +29,7 @@
 #ratingP {
    font-family: "Barlow";
    font-weight: 400;
-   font-size: 16px; 
+   font-size: 20px; 
    color: #5F5F5F;
    margin-left: 25rem;
 }
@@ -38,29 +37,22 @@
 #commentsP {
    font-family: "Barlow";
    font-weight: 400;
-   font-size: 16px; 
+   font-size: 20px; 
    color: #5F5F5F;
 }
 
 .form-text {
     font-family: "Barlow";
     font-weight: 400;
-    font-size: 16px;
+    font-size: 16px !important;
     color: #5F5F5F;
     margin-top: 1rem;
     line-height: 2rem;
 }
 
-.form-title2 {
-  font-family: "Barlow";
-  font-weight: 600;
-  font-size: 20px;
-  margin-top: 2rem;
-}
 
-.radio-button-text {
-  font-family: "Barlow";
-  font-weight: 400;
-  font-size: 16px;
-  color: #5F5F5F;
+.boyut-sec{
+  display: flex;
+  margin-top: 40px;
+  gap: 15rem;
 }
