@@ -1,18 +1,17 @@
-import { useState } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
-import Header from './components/header';
-import Main from './components/main';
-import Footer from './components/footer';
+import Home from './components/Home';
+import Order from './components/Order';
 
 function App() {
-
   return (
-    <>
-      <Header />
-      <Main />
-      <Footer />
-    </>
-  )
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/order" component={Order} />
+      </Switch>
+      </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

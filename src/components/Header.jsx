@@ -1,6 +1,13 @@
 import "./Header.css";
+import { useHistory } from 'react-router-dom';
 
 export default function Header() {
+
+    let history = useHistory();
+    const handleClick = () => {
+    history.push('/order');
+    };   
+
     return (
         <header>
       <section className="banner">
@@ -11,7 +18,7 @@ export default function Header() {
             <div className="header-title-container">
               <h2 className="header-title">KOD ACIKTIRIR<br/>PİZZA, DOYURUR</h2>
             </div>
-            <button className="header-btn">ACIKTIM</button>
+            <button className="header-btn" onClick={handleClick}>ACIKTIM</button>
           </div>
         </div>
       </section>

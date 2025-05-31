@@ -1,26 +1,32 @@
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import "./Main.css";
 
 export default function Main() {
+    let history = useHistory();
+    const handleClick = () => {
+        history.push('/order');
+    };
+
     return (       
-            <>  
+      <> 
         <section className="main">
       <div className="containers">
         <div className="container1">
           <h3>Özel</h3>
           <h3>Lezzetus</h3>
           <p>Position:Absolute Acı Burger</p>
-          <button className="containers-button">SİPARİŞ VER</button>
+          <button className="containers-button" onClick={handleClick}>SİPARİŞ VER</button>
         </div>
         <div className="container2">
           <div className="container2-top">
             <h4>Hackathlon</h4>
             <h4>Burger Menü</h4>
-            <button className="containers-button">SİPARİŞ VER</button>
+            <button className="containers-button" onClick={handleClick}>SİPARİŞ VER</button>
           </div>
           <div className="container2-bottom">
             <h4><font color="#CE2829">Çoooook</font> hızlı</h4>
             <h4>npm gibi kurye</h4>
-            <button className="containers-button">SİPARİŞ VER</button>
+            <button className="containers-button" onClick={handleClick}>SİPARİŞ VER</button>
           </div>
         </div>
       </div>
@@ -103,6 +109,6 @@ export default function Main() {
         </div>
       </div>
     </section>
-    </>
+    </> 
     )
 }
