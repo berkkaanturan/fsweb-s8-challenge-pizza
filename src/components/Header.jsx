@@ -1,24 +1,29 @@
 import "./Header.css";
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 export default function Header() {
+  let history = useHistory();
+  const handleClick = () => {
+    history.push("/order");
+  };
 
-    let history = useHistory();
-    const handleClick = () => {
-    history.push('/order');
-    };   
-
-    return (
-        <header>
+  return (
+    <header>
       <section className="banner">
         <div className="header-banner">
           <img src="images/iteration-1-images/logo.svg" alt="" />
           <div className="banner-title">
             <p className="header-p">fırsatı kaçırma</p>
             <div className="header-title-container">
-              <h2 className="header-title">KOD ACIKTIRIR<br/>PİZZA, DOYURUR</h2>
+              <h2 className="header-title">
+                KOD ACIKTIRIR
+                <br />
+                PİZZA, DOYURUR
+              </h2>
             </div>
-            <button className="header-btn" onClick={handleClick}>ACIKTIM</button>
+            <button className="header-btn" onClick={handleClick}>
+              ACIKTIM
+            </button>
           </div>
         </div>
       </section>
@@ -51,5 +56,5 @@ export default function Header() {
         </nav>
       </section>
     </header>
-    );
+  );
 }

@@ -4,12 +4,12 @@ import ProductDetails from "./ProductDetails";
 import SectionForm from "./SectionForm";
 
 export default function Order() {
-    return (
-        <>
-        <HeaderForm />
-        <ProductDetails />
-        <SectionForm />
-        <Footer />
-        </>
-    )
+  return (
+    <>
+      <HeaderForm />
+      <ProductDetails />
+      <SectionForm />
+      <Footer />
+    </>
+  );
 }

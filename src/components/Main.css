@@ -218,6 +218,7 @@
   padding: 2rem;
   width: 18.5%;
   border-radius: 1rem;
+  margin-bottom: 3rem;
 }
 
 .card1:hover, .card2:hover, .card3:hover {
