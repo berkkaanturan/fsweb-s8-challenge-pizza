@@ -79,10 +79,10 @@ export default function SectionForm() {
   const calculateTotal = () => {
     const basePrice = 85.5;
     const extraPrice = 5.0;
-    return (basePrice + (selected.length * extraPrice)) * count;
+    return ((basePrice * count)  + ((selected.length * extraPrice) * count));
   };
 
-  const calculateExtrasTotal = () => {
+  const calculateExtrasTotal = () => { 
     const extraPrice = 5.0;
     return (selected.length * extraPrice) * count;
   };
@@ -105,6 +105,8 @@ export default function SectionForm() {
             selected={selected}
             onSubmit={handleSubmit}
             loading={loading}
+            calculateTotal={calculateTotal}
+            calculateExtrasTotal={calculateExtrasTotal}
           />
           {error && (
             <div style={{ color: "red", alignSelf: "center" }}>{error}</div>

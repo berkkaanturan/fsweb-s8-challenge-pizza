@@ -1,10 +1,17 @@
 import { Button, Card, CardBody } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function CompleteOrder({ count, setCount, selected, onSubmit, loading }) {
+function CompleteOrder({
+  count,
+  setCount,
+  selected,
+  onSubmit,
+  loading,
+  calculateTotal,
+  calculateExtrasTotal,
+}) {
   const basePrice = 85.5;
   const extraPrice = 5.0;
-
 
   const handleIncrement = () => {
     setCount((prev) => prev + 1);
@@ -14,16 +21,6 @@ function CompleteOrder({ count, setCount, selected, onSubmit, loading }) {
     if (count > 1) {
       setCount((prev) => prev - 1);
     }
-  };
-
-  const calculateExtrasTotal = () => {
-    return selected.length * extraPrice * count;
-  };
-
-  // Toplam sipariş tutarını hesapla
-  const calculateTotal = () => {
-    const extrasTotal = calculateExtrasTotal();
-    return (basePrice + extrasTotal) * count;
   };
 
   const handleSubmit = (e) => {
@@ -90,7 +87,7 @@ function CompleteOrder({ count, setCount, selected, onSubmit, loading }) {
             </h5>
             <div className="d-flex justify-content-between mb-2">
               <span style={{ color: "#6c757d" }}>Pizza</span>
-              <span>{basePrice.toFixed(2)}₺</span>
+              <span>{basePrice * count.toFixed(2)}₺</span>
             </div>
             <div className="d-flex justify-content-between mb-2">
               <span style={{ color: "#6c757d" }}>
