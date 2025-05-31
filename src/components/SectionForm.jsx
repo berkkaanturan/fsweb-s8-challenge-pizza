@@ -24,12 +24,23 @@ export default function SectionForm() {
     setLoading(true);
     setError(null);
 
-    if (!size || !dough) {
-      setError("Lütfen pizza boyutu ve hamur seçimi yapınız!");
-      setLoading(false);
-      return;
-    }
-
+    if (!size) {
+    setError("Lütfen pizza boyutu ve hamur seçimi yapınız!");
+    setLoading(false);
+    return; 
+  } 
+  
+  if (!dough) {
+    setError("Lütfen pizza hamuru seçimi yapınız!");
+    setLoading(false);
+    return; 
+  } 
+  
+  if (selected.length < 4 || selected.length > 10) {
+    setError("Lütfen 4 ila 10 arası ekstra malzeme seçiniz!");
+    setLoading(false);
+    return;
+  }
     const orderData = {
       size,
       dough,
@@ -96,7 +107,7 @@ export default function SectionForm() {
             loading={loading}
           />
           {error && (
-            <div style={{ color: "red", marginTop: "1rem" }}>{error}</div>
+            <div style={{ color: "red", alignSelf: "center" }}>{error}</div>
           )}
         </section>
       </form>

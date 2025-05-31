@@ -18,6 +18,7 @@ function OrderSuccess() {
         {orderDetails && (
           <div className="order-details">
             <h2>Position Absolute Acı Pizza</h2>
+            <div className="all-details">
             <div className="detail-item">
               <span>Boyut:</span> <strong>{orderDetails.size}</strong>
             </div>
@@ -36,15 +37,16 @@ function OrderSuccess() {
             <div className="detail-item">
               <span>Adet:</span> <strong>{orderDetails.quantity}</strong>
             </div>
+            </div>
 
             <div className="price-div">
               <div className="total-price">
                 <span>Sipariş Toplamı</span>
-                <div className="total-price-details">
-                  <span>Toplam</span>
-                  <span>{orderDetails.totalPrice.toFixed(2)}₺</span>
+                <div className="total-price-details1">
+                  <span>Seçimler</span>
+                  <span>{orderDetails.ingredientPrice ? orderDetails.ingredientPrice.toFixed(2) : `00.00`}₺</span>
                 </div>
-                <div className="total-price-details">
+                <div className="total-price-details2">
                   <span>Toplam</span>
                   <span>{orderDetails.totalPrice.toFixed(2)}₺</span>
                 </div>

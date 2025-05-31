@@ -1,9 +1,10 @@
 import { Button, Card, CardBody } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function CompleteOrder({ count, setCount, selected, onSubmit, loading}) {
+function CompleteOrder({ count, setCount, selected, onSubmit, loading }) {
   const basePrice = 85.5;
-  const extraPrice = 5.0; // Her ekstra malzeme için 5₺
+  const extraPrice = 5.0;
+
 
   const handleIncrement = () => {
     setCount((prev) => prev + 1);
@@ -15,8 +16,14 @@ function CompleteOrder({ count, setCount, selected, onSubmit, loading}) {
     }
   };
 
- const calculateTotal = () => {
-    return (basePrice + ingredientPrice) * count;
+  const calculateExtrasTotal = () => {
+    return selected.length * extraPrice * count;
+  };
+
+  // Toplam sipariş tutarını hesapla
+  const calculateTotal = () => {
+    const extrasTotal = calculateExtrasTotal();
+    return (basePrice + extrasTotal) * count;
   };
 
   const handleSubmit = (e) => {
@@ -25,8 +32,14 @@ function CompleteOrder({ count, setCount, selected, onSubmit, loading}) {
   };
 
   return (
-    <div className="complete-order" style={{ marginTop: "2rem", display: "flex" }}>
-      <div className="d-flex align-items-center mb-4" style={{ display: "flex", alignSelf: "start" }}>
+    <div
+      className="complete-order"
+      style={{ marginTop: "2rem", display: "flex" }}
+    >
+      <div
+        className="d-flex align-items-center mb-4"
+        style={{ display: "flex", alignSelf: "start" }}
+      >
         <Button
           onClick={handleDecrement}
           style={{
@@ -83,10 +96,12 @@ function CompleteOrder({ count, setCount, selected, onSubmit, loading}) {
               <span style={{ color: "#6c757d" }}>
                 Ekstra Malzemeler ({selected.length} adet)
               </span>
-              <span>{ingredientPrice.toFixed(2)}₺</span>
+              <span>{calculateExtrasTotal().toFixed(2)}₺</span>
             </div>
             <div className="d-flex justify-content-between">
-              <span style={{ color: "#dc3545", fontWeight: "600" }}>Toplam</span>
+              <span style={{ color: "#dc3545", fontWeight: "600" }}>
+                Toplam
+              </span>
               <span style={{ color: "#dc3545", fontWeight: "600" }}>
                 {calculateTotal().toFixed(2)}₺
               </span>
@@ -104,10 +119,10 @@ function CompleteOrder({ count, setCount, selected, onSubmit, loading}) {
             padding: "0.75rem",
             fontWeight: "600",
             color: "#000",
-            opacity: loading ? 0.7 : 1
+            opacity: loading ? 0.7 : 1,
           }}
         >
-          {loading ? "Sipariş Gönderiliyor..." : "SİPARİŞ VER" }
+          {loading ? "Sipariş Gönderiliyor..." : "SİPARİŞ VER"}
         </Button>
       </div>
     </div>
