@@ -1,0 +1,122 @@
+.footer-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 58%;
+  margin: 0 auto;
+  padding: 3rem 0 2rem 0;
+}
+
+footer{
+  background-color: rgba(26, 26, 26, 1);
+  margin-top: 4rem;
+  border-bottom: solid 0.1rem #3d3c3c;
+}
+
+.footer-left {
+  width: 33%;
+}
+
+footer h5 {
+  font-family: "Londrina solid";
+  color: white;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+
+.footer-left-item {
+  display: flex; /* Flexbox kullanımı */
+  align-items: center; /* Dikey hizalama */
+  gap: 0.5rem; /* Aradaki boşluk */
+  color: white;
+  margin-top: 1.5rem;
+  
+}
+
+.footer-left-item img {
+  width: 2rem; /* İkonun genişliği sabit */
+}
+
+.footer-left-item p {
+  margin: 0.5rem; /* Varsayılan boşlukları kaldır */
+  font-family: "Barlow";
+  font-size: 1.1rem;
+}
+
+.footer-mid {
+  display: flex;
+  flex-direction: column;
+  align-items: left; /* Sola hizala */
+  width: 33%;
+  margin-top: 6rem;
+  gap: 1.3rem;
+}
+
+.footer-mid h6{
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Barlow";
+  font-weight: 500;
+}
+
+.footer-mid ul {
+  list-style: none; /* Noktaları kaldır */
+  text-align: left; /* Metinleri sola hizala */
+  padding: 0; /* Varsayılan iç boşlukları kaldır */
+  line-height: 1rem; /* Satır yüksekliğini ayarla */
+}
+
+.footer-mid ul li {
+  margin: 1.5rem auto; /* Her bir öğe için üst ve alt boşluk */
+}
+
+.footer-mid a {
+  text-decoration: none; /* Alt çizgiyi kaldır */
+  color: white; /* Yazı rengini beyaz yap */
+  font-family: "Barlow";
+  font-size: 1.1rem;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction:column;
+  width: 33%;
+  margin-top: 6rem;
+}
+
+.footer-right h6 {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Barlow";
+  font-weight: 500;
+}
+
+.footer-right-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Aradaki boşluk */
+  width: 100%;
+  margin-top: 2.5rem;
+}
+
+.copyright {
+  background-color: rgba(26, 26, 26, 1);
+  display: flex;
+  justify-content: center;
+}
+
+.copyright-items {
+  width: 59%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 
+}
+
+.copyright-items p {
+  color: white;
+  font-family: "Barlow";
+  font-size: 1rem;
+  font-weight: 300;
+} 
