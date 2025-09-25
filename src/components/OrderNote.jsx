@@ -1,7 +1,7 @@
 import { FormGroup, Label, Input } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function OrderNote({note, setNote}) {
+function OrderNote({ note, setNote }) {
   return (
     <FormGroup>
       <Label

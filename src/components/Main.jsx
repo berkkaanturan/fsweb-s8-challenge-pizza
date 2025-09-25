@@ -116,10 +116,7 @@ export default function Main() {
           </div>
         </div>
         <div className="card3">
-          <img
-            src="public/images/iteration-2-images/pictures/food-3.png"
-            alt=""
-          />
+          <img src="/images/iteration-2-images/pictures/food-3.png" alt="" />
           <div className="bottompart">
             <h4>useEffect Tavuklu Burger</h4>
             <div className="bottom-text">
