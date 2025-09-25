@@ -49,37 +49,37 @@ export default function Main() {
         <nav>
           <div className="nav-item">
             <a href="">
-              <img src="images/iteration-2-images/icons/1.svg" alt="" />
+              <img src="public/images/iteration-2-images/icons/1.svg" alt="" />
               Ramen
             </a>
           </div>
           <div className="nav-item">
             <a href="" className="active">
-              <img src="images/iteration-2-images/icons/2.svg" alt="" />
+              <img src="public/images/iteration-2-images/icons/2.svg" alt="" />
               Pizza
             </a>
           </div>
           <div className="nav-item">
             <a href="">
-              <img src="images/iteration-2-images/icons/3.svg" alt="" />
+              <img src="public/images/iteration-2-images/icons/3.svg" alt="" />
               Burger
             </a>
           </div>
           <div className="nav-item">
             <a href="">
-              <img src="images/iteration-2-images/icons/4.svg" alt="" />
+              <img src="public/images/iteration-2-images/icons/4.svg" alt="" />
               French Fries
             </a>
           </div>
           <div className="nav-item">
             <a href="">
-              <img src="images/iteration-2-images/icons/5.svg" alt="" />
+              <img src="public/images/iteration-2-images/icons/5.svg" alt="" />
               Fast food
             </a>
           </div>
           <div className="nav-item">
             <a href="">
-              <img src="images/iteration-2-images/icons/6.svg" alt="" />
+              <img src="public/images/iteration-2-images/icons/6.svg" alt="" />
               Soft drinks
             </a>
           </div>
@@ -88,7 +88,10 @@ export default function Main() {
 
       <section className="food-cards">
         <div className="card1">
-          <img src="images/iteration-2-images/pictures/food-1.png" alt="" />
+          <img
+            src="public/images/iteration-2-images/pictures/food-1.png"
+            alt=""
+          />
           <div className="bottompart">
             <h4>Terminal Pizza</h4>
             <div className="bottom-text">
@@ -99,7 +102,10 @@ export default function Main() {
           </div>
         </div>
         <div className="card2">
-          <img src="images/iteration-2-images/pictures/food-2.png" alt="" />
+          <img
+            src="public/images/iteration-2-images/pictures/food-2.png"
+            alt=""
+          />
           <div className="bottompart">
             <h4>Position Absolute Acı Pizza</h4>
             <div className="bottom-text">
@@ -110,7 +116,10 @@ export default function Main() {
           </div>
         </div>
         <div className="card3">
-          <img src="images/iteration-2-images/pictures/food-3.png" alt="" />
+          <img
+            src="public/images/iteration-2-images/pictures/food-3.png"
+            alt=""
+          />
           <div className="bottompart">
             <h4>useEffect Tavuklu Burger</h4>
             <div className="bottom-text">
