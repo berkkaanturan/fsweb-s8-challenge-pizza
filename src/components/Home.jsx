@@ -1,5 +1,5 @@
 import Footer from "./Footer";
-import Header from "./header";
+import Header from "./Header";
 import Main from "./main";
 
 export default function Home() {
