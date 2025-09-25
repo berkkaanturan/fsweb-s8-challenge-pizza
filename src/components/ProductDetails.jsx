@@ -18,7 +18,7 @@ function ProductDetails() {
       }}
     >
       <img
-        src="public/images/iteration-2-images/pictures/form-banner.png"
+        src="/images/iteration-2-images/pictures/form-banner.png"
         style={{ marginBottom: "30px", width: "30%" }}
       ></img>
       <div style={{ margin: "0 40rem 0 40rem" }}>

@@ -16,7 +16,7 @@ export default function SectionForm() {
   const [selected, setSelected] = useState([]);
   const [note, setNote] = useState("");
   const [count, setCount] = useState(1);
-  const [loading, setLoading] = useState(false); 
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const handleSubmit = (e) => {
@@ -25,22 +25,22 @@ export default function SectionForm() {
     setError(null);
 
     if (!size) {
-    setError("Lütfen pizza boyutu ve hamur seçimi yapınız!");
-    setLoading(false);
-    return; 
-  } 
-  
-  if (!dough) {
-    setError("Lütfen pizza hamuru seçimi yapınız!");
-    setLoading(false);
-    return; 
-  } 
-  
-  if (selected.length < 4 || selected.length > 10) {
-    setError("Lütfen 4 ila 10 arası ekstra malzeme seçiniz!");
-    setLoading(false);
-    return;
-  }
+      setError("Lütfen pizza boyutu ve hamur seçimi yapınız!");
+      setLoading(false);
+      return;
+    }
+
+    if (!dough) {
+      setError("Lütfen pizza hamuru seçimi yapınız!");
+      setLoading(false);
+      return;
+    }
+
+    if (selected.length < 4 || selected.length > 10) {
+      setError("Lütfen 4 ila 10 arası ekstra malzeme seçiniz!");
+      setLoading(false);
+      return;
+    }
     const orderData = {
       size,
       dough,
@@ -52,41 +52,40 @@ export default function SectionForm() {
     };
 
     axios
-    .post("https://reqres.in/api/pizza", orderData, {
-      headers: {
-        'x-api-key': 'reqres-free-v1',
-        'Content-Type': 'application/json'
-      }
-    })
-    .then((res) => {
-      console.log("Sipariş detayları:", res.data);
-      history.push("/order-success", { 
-        orderDetails: {
-          ...orderData,
-          orderId: res.data.id
-        } 
+      .post("https://reqres.in/api/pizza", orderData, {
+        headers: {
+          "x-api-key": "reqres-free-v1",
+          "Content-Type": "application/json",
+        },
+      })
+      .then((res) => {
+        console.log("Sipariş detayları:", res.data);
+        history.push("/order-success", {
+          orderDetails: {
+            ...orderData,
+            orderId: res.data.id,
+          },
+        });
+      })
+      .catch((err) => {
+        console.error("Hata detayı:", err.response);
+        setError(`Sipariş alınamadı: ${err.message}`);
+      })
+      .finally(() => {
+        setLoading(false);
       });
-    })
-    .catch((err) => {
-      console.error("Hata detayı:", err.response);
-      setError(`Sipariş alınamadı: ${err.message}`);
-    })
-    .finally(() => {
-      setLoading(false);
-    });
   };
 
   const calculateTotal = () => {
     const basePrice = 85.5;
     const extraPrice = 5.0;
-    return ((basePrice * count)  + ((selected.length * extraPrice) * count));
+    return basePrice * count + selected.length * extraPrice * count;
   };
 
-  const calculateExtrasTotal = () => { 
+  const calculateExtrasTotal = () => {
     const extraPrice = 5.0;
-    return (selected.length * extraPrice) * count;
+    return selected.length * extraPrice * count;
   };
-
 
   return (
     <section>
